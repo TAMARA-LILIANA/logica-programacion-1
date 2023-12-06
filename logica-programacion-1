@@ -1,0 +1,67 @@
+
+Algoritmo Numero
+	Definir num1, num2, num3, vmayor, vmedio, vmenor Como entero
+	
+	// Ingresar datos
+	Escribir "ingrese tres numeros"
+	
+	Escribir "------------"
+	Escribir "ingrese primer numero"
+	Leer num1
+	
+	Escribir "------------"
+	escribir "ingrese segundo numero"
+	leer num2
+	Mientras num1 = num2 Hacer
+		escribir "El numero ya ha sido ingresado por favor ingrese otro numero"
+		leer num2
+	Fin Mientras
+	
+	escribir "------------"
+	Escribir "ingrese tercer numero"
+	leer num3
+	
+	Mientras num1 = num3 o num2 = num3 Hacer
+		escribir "El numero ya ha sido ingresado por favor ingrese otro numero"
+		leer num3
+	Fin Mientras
+	
+	Si num1 > num2 Entonces
+		Si num1 > num3 Entonces
+			vmayor = num1
+			Si num2 > num3 Entonces
+				vmedio = num2
+				vmenor = num3
+			SiNo
+				vmedio = num3
+				vmenor = num2
+			Fin Si
+		SiNo
+			vmayor = num3
+			vmedio = num1
+			vmenor = num2
+		Fin Si
+	SiNo
+		Si num2 > num3 Entonces
+			vmayor = num2
+			Si num1 > num3 Entonces
+				vmedio = num1
+				vmenor = num3
+			SiNo
+				vmedio = num3
+				vmenor = num1
+			Fin Si
+		SiNo
+			vmayor = num3
+			vmedio = num2
+			vmenor = num1
+		Fin Si
+	Fin Si
+	
+	escribir "Ascendente = " vmenor " , " vmedio " , " vmayor
+	escribir "Descendente = " vmayor " , " vmedio " , " vmenor
+	escribir "el numero mayor es = " vmayor
+	escribir "el numero medio es = " vmedio
+	escribir "el numero menor es = " vmenor	
+	
+FinAlgoritmo
